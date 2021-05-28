@@ -4,7 +4,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 
 public class MainPage extends AbstractPageObject {
@@ -75,7 +77,7 @@ public class MainPage extends AbstractPageObject {
     public void searchTenModelMP() {
         log.info("Находим 10 модель материнской платы и кликаем на нее");
         WebElement clickModelPM10 = driver.findElement(By.xpath("//div[@class='bcontent']//a[text()='ASRock B560M STEEL LEGEND']"));
-        clickModelPM10.sendKeys(Keys.PAGE_DOWN);
+        clickModelPM10.sendKeys(Keys.ARROW_DOWN);
         clickModelPM10.click();
         log.info("переходим на нее");
     }
